@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+    <head>
+    <title>Angular Project One</title>
+       
+        
+    </head>
+    <!--Declaring Angular application-->
+    <body ng-app="appName">
+    <h1 style="color:red">Learning Scope Variables</h1>
+        <div ng-controller="appCtrl">
+            Two way data binding{{header}}
+            
+            <button ng-click="test()">Change Header</button>
+            One way data binding{{::header}}
+        </div>
+    
+        
+        <script type="text/javascript" src="/node_modules/angular/angular.js"></script>  
+        <script type="text/javascript" src="/scripts/app.js"></script>
+        <script type="text/javascript" src="/scripts/controller/appCtrl.js"></script>
+        
+    </body>
+</html>
