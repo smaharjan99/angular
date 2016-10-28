@@ -6,4 +6,6 @@ angular.module("appName")
         $scope.test=function(){
             $scope.header="oh look it changed";
         }
+        
+        
     }]);
