@@ -1,96 +1,113 @@
 <!doctype html>
 <html>
-    <head>
+
+<head>
     <title>Angular Project One</title>
-    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css" >  
-        
-    </head>
-    <!--Declaring Angular application-->
-    <body ng-app="appName">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+
+</head>
+<!--Declaring Angular application-->
+
+<body ng-app="appName">
     <h1 style="color:red">Learning Scope Variables</h1>
-        <div ng-controller="appCtrl">
-            Two way data binding{{header}}
-            
-            <button ng-click="test()">Change Header</button>
-            One way data binding{{::header}}
-        </div>
-        
-         <!--  Person Form-->
-        <div ng-controller="personCtrl">
-            <h1>From Person Ctrl</h1>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-2">
-                        <input type="text" ng-model="personModel.firstName" placeholder="Enter First Name">
-                    </div>
-                    <div class="col-md-2">
-                        <input type="text" ng-model="personModel.lastName" placeholder="Enter Last Name">
-                    </div>
-                    <div class="col-md-2">
-                        <input type="text" ng-model="personModel.address" placeholder="Enter Address">
-                    </div>
-                    <div class="col-md-2">
-                        <input type="text" ng-model="personModel.phoneNumber" placeholder="Enter Phone Number">
-                    </div>
+    <div ng-controller="appCtrl">
+        <h1>From AppCtrl</h1>
+        <sample-header></sample-header>
+        Two way data binding{{header}}
+
+        <button ng-click="test()">Change Header</button>
+        One way data binding{{::header}}
+    </div>
+
+    <!--  Person Form-->
+    <div ng-controller="personCtrl">
+        <h1>From Person Ctrl</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <input type="text" ng-model="personModel.firstName" placeholder="Enter First Name">
                 </div>
-                    
-                <div class="row">
-                    
-                    <div class="col-md-2">
-                        <label>First Name</label>
-                    </div>
-                    
-                    <div class="col-md-2">
-                        <label>Last Name</label>
-                    </div>
-                    
-                    <div class="col-md-2">
-                        <label>Address</label>
-                    </div>
-                    
-                    <div class="col-md-2">
-                        <label>Phone Number</label>
-                    </div>
-                    
+                <div class="col-md-2">
+                    <input type="text" ng-model="personModel.lastName" placeholder="Enter Last Name">
+                </div>
+                <div class="col-md-2">
+                    <input type="text" ng-model="personModel.address" placeholder="Enter Address">
+                </div>
+                <div class="col-md-2">
+                    <input type="text" ng-model="personModel.phoneNumber" placeholder="Enter Phone Number">
+                </div>
             </div>
-                   <div class="row">
-                    
-                    <div class="col-md-2">
-                        {{personModel.firstName}}
-                    </div>
-                    
-                    <div class="col-md-2">
-                        {{personModel.lastName}}
-                    </div>
-                    
-                    <div class="col-md-2">
-                        {{personModel.address}}
-                    </div>
-                    
-                    <div class="col-md-2">
-                        {{personModel.phoneNumber}}
-                    </div>
-                    
+
+            <div class="row">
+
+                <div class="col-md-2">
+                    <label>First Name</label>
+                </div>
+
+                <div class="col-md-2">
+                    <label>Last Name</label>
+                </div>
+
+                <div class="col-md-2">
+                    <label>Address</label>
+                </div>
+
+                <div class="col-md-2">
+                    <label>Phone Number</label>
+                </div>
+
             </div>
-                
-                
+            <div class="row">
+
+                <div class="col-md-2">
+                    {{personModel.firstName}}
+                </div>
+
+                <div class="col-md-2">
+                    {{personModel.lastName}}
+                </div>
+
+                <div class="col-md-2">
+                    {{personModel.address}}
+                </div>
+
+                <div class="col-md-2">
+                    {{personModel.phoneNumber}}
+                </div>
+
             </div>
-            
-            <div ng-show="forNgShow">
-                This is for testing ng show
-            </div>
-            
-            <div ng-if="forNgIf">
-                This is for testing ng if
-            </div>
-            <button ng-click="toggleForShow()" class="btb btn-warning">NG_SHOW_TOGGLE</button>
-            <button ng-click="toggleForIf()" class="btb btn-danger">NG_If_TOGGLE</button>
+
+
         </div>
-    
-        
-        <script type="text/javascript" src="/node_modules/angular/angular.js"></script>  
-        <script type="text/javascript" src="/scripts/app.js"></script>
-        <script type="text/javascript" src="/scripts/controller/appCtrl.js"></script>
-        <script type="text/javascript" src="/scripts/controller/personCtrl.js"></script>
-    </body>
+
+        <div ng-show="forNgShow">
+            This is for testing ng show
+        </div>
+
+        <div ng-if="forNgIf">
+            This is for testing ng if
+        </div>
+
+
+
+        <button ng-click="toggleForShow()" class="btb btn-warning">NG_SHOW_TOGGLE</button>
+        <button ng-click="toggleForIf()" class="btb btn-danger">NG_If_TOGGLE</button>
+    </div>
+
+    <div class="container" >
+        <h1>Learning Directives</h1> Ad Element
+        <sample-header></sample-header>
+        <br> As Attribute
+        <div sample-header></div>
+        <br> As class
+        <div class="sample header"></div>
+    </div>
+
+    <script type="text/javascript" src="/node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/controller/appCtrl.js"></script>
+    <script type="text/javascript" src="/scripts/directives/firstDirective.js"></script>
+    <script type="text/javascript" src="/scripts/controller/personCtrl.js"></script>
+</body>
+
 </html>
