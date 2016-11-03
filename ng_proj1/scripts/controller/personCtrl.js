@@ -1,7 +1,7 @@
 'use strict!';
 
 angular.module("appName")
-    .controller("personCtrl", ["$scope", function ($scope) {
+    .controller("personCtrl", ["$scope", "personService", "personFactory", function ($scope, personService, personFactory) {
 
         //Creating model for person form
         $scope.personModel = {
@@ -11,38 +11,10 @@ angular.module("appName")
             phoneNumber: "",
         };
 
-        $scope.personArray = [
-            {
-                firstName: "John",
-                lastName: "Doe",
-                phoneNumber: "231-131-1411",
-                address: "abbey rd"
-            },
-            {
-                firstName: "Paul",
-                lastName: "Scholes",
-                phoneNumber: "231-131-8923",
-                address: "Hartr rd"
-            },
-            {
-                firstName: "Eric",
-                lastName: "Cantona",
-                phoneNumber: "941-131-1411",
-                address: "french rd"
-            },
-            {
-                firstName: "Ryan",
-                lastName: "Giggs",
-                phoneNumber: "231-941-1411",
-                address: "welshy rd"
-            },
-            {
-                firstName: "Frank",
-                lastName: "De Boer",
-                phoneNumber: "231-123-1411",
-                address: "dutchy rd"
-            }
-        ]
+        console.log(personService.getElement(0));
+        $scope.personArray = personService.personArray;
+
+        console.log($scope.personArray);
 
         $scope.forNgShow = true;
         $scope.forNgIf = true;
@@ -73,16 +45,16 @@ angular.module("appName")
         $scope.personModel.phoneNumber = "210-123-9870";
 
 
-        $scope.personForm = {
-            addPerson: function () {
-                var personObj = {
-                    firstName: $scope.personModel.firstName,
-                    lastName: $scope.personModel.lastName,
-                    address: $scope.personModel.address,
-                    phoneNumber: $scope.personModel.phoneNumber
-                }
-                $scope.personArray.push(personObj);
+        /*   $scope.personForm = {
+       addPerson: function () {
+           var personObj = {
+               firstName: $scope.personModel.firstName,
+               lastName: $scope.personModel.lastName,
+               address: $scope.personModel.address,
+               phoneNumber: $scope.personModel.phoneNumber
+           }
+           $scope.personArray.push(personObj);
 
-            }
-        };
+       }
+   };*/
     }]);

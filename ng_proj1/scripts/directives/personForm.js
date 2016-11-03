@@ -17,10 +17,8 @@ angular.module("appName").directive("personForm", function () {
                                 phoneNumber: $scope.personModel.phoneNumber
                             }
                             $scope.personArray.push(personObj);
-
                         }
                     };
-
                 },*/
         templateUrl: "/view/personForm.html",
 
