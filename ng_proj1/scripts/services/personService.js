@@ -1,4 +1,14 @@
 angular.module("appName").service("personService", [function () {
+
+    var personObj = {
+        firstName: "",
+        lastName: "",
+        address: "",
+        phoneNumber: ""
+    }
+
+    this.addPerson = addPerson;
+
     this.personArray = [
         {
             firstName: "John",
@@ -39,13 +49,13 @@ angular.module("appName").service("personService", [function () {
         }
     }
     var that = this;
-    this.test = function () {
+   /* this.test = function () {
         console.log(this.personObj);
     }
-
+*/
     function addPerson() {
-        this.personObj = "random";
-        console.log(that.personObj);
+        // this.personObj = "random";
+        //console.log(that.personObj);
         var tempPersonObj = {
             firstName: that.personObj.firstName,
             lastName: that.personObj.lastName,

@@ -50,12 +50,12 @@ angular.module("appName").factory("personFactory", [function () {
             }
     ]
 
-        /*    this.getElement = function (index) {
+        /*  this.getElement = function (index) {
         var length = this.personArray.length;
         if (index < length) {
-            console.log(this.personArray[index].firstName);
+            console.log(this.personArray.[index].firstName);
         }
-    }*/
+        }*/
     }
 }]);
 /*   var that =this;

@@ -1,7 +1,7 @@
 'use strict!';
 
 angular.module("appName")
-    .controller("personCtrl", ["$scope", "personService", "personFactory", function ($scope, personService, personFactory) {
+    .controller("personCtrl", ["$scope", "personService", function ($scope, personService) {
 
         //Creating model for person form
         $scope.personModel = {
@@ -11,7 +11,8 @@ angular.module("appName")
             phoneNumber: "",
         };
 
-        console.log(personService.getElement(0));
+        //console.log(personService.getElement(0));
+        personService.personObj = $scope.personModel;
         $scope.personArray = personService.personArray;
 
         console.log($scope.personArray);
@@ -45,7 +46,10 @@ angular.module("appName")
         $scope.personModel.phoneNumber = "210-123-9870";
 
 
-        /*   $scope.personForm = {
+        $scope.personForm = {
+            addPerson: personService.addPerson
+        };
+        /*     $scope.personForm = {
        addPerson: function () {
            var personObj = {
                firstName: $scope.personModel.firstName,
@@ -57,4 +61,19 @@ angular.module("appName")
 
        }
    };*/
+        $scope.myTable = {
+            sortBy: 'firstName',
+            sortOrder: false,
+            toggleOrder: function (name) {
+                if ($scope.myTable.sortBy != name) {
+                    $scope.myTable.sortOrder = false;
+                    $scope.myTable.sortBy = name;
+                } else {
+
+                    $scope.myTable.sortOrder = !$scope.myTable.sortOrder;
+                }
+            }
+        }
+
+
     }]);
