@@ -214,6 +214,9 @@ app.get('/', function (req, res) {
     res.redirect('/view/index.html');
 })
 
+app.get('/contact', function (req, res) {
+    res.redirect('/view/index2.html');
+})
 
 app.listen(3000, function (req, res) {
     console.log('listening');

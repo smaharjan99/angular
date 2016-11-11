@@ -1,11 +1,11 @@
 <div class="row">
 
     <div class="col-md-2">
-        <label ng-click='personTable.toggleOrder("firstName")'>First Name</label>
+        <label ng-click='personTable.toggleOrder("firstname")'>First Name</label>
     </div>
 
     <div class="col-md-2">
-        <label ng-click='personTable.toggleOrder("lastName")'>Last Name</label>
+        <label ng-click='personTable.toggleOrder("lastname")'>Last Name</label>
     </div>
 
     <div class="col-md-2">
@@ -13,7 +13,7 @@
     </div>
 
     <div class="col-md-2">
-        <label ng-click='personTable.toggleOrder("phoneNumber")'>Phone Number</label>
+        <label ng-click='personTable.toggleOrder("phone")'>Phone Number</label>
     </div>
 
 </div>
@@ -22,11 +22,11 @@
 
 
     <div class="col-md-2">
-        {{person.firstName}}
+        {{person.firstname}}
     </div>
 
     <div class="col-md-2">
-        {{person.lastName}}
+        {{person.lastname}}
     </div>
 
     <div class="col-md-2">
@@ -34,8 +34,11 @@
     </div>
 
     <div class="col-md-2">
-        {{person.phoneNumber}}
+        {{person.phone}}
     </div>
+
+    <button class="btn btn-primary" ng-click="personForm.editPersonForm(person)"> EDIT</button>
+    <button class="btn btn-danger" ng-click="personForm.deletePerson(person.pid)"> DELETE</button>
 </div>
 
 <!--<ol>
