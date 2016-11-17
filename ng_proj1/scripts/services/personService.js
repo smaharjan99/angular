@@ -8,6 +8,7 @@ angular.module("appName").service("personService", ["$http", function ($http) {
     }
     var that = this;
     this.addPerson = addPerson;
+
     // this.editPerson = editPerson;
     //this.personArray = [];
 
