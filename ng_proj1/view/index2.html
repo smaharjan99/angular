@@ -20,11 +20,11 @@
 </div>
 <sample-header></sample-header>-->
 
-    <h1>Playing with custom header</h1>
+    <!-- <h1>Playing with custom header</h1>
     <person-form></person-form>
     <table-form></table-form>
     <h1>From EDIT FORM</h1>
-    <edit-form></edit-form>
+    <edit-form></edit-form>-->
     <!--Learning ng repeat-->
     <!--<div ng-controller="personCtrl">
         <ol>
@@ -33,7 +33,14 @@
 
     </div>-->
 
+    <h1> Playing with routers</h1>
+    <a href="#!/forms">forms</a>
+    <a href="#!/tables">tables</a>
+    <a href="#!/random">random</a>
+    <div ng-view></div>
+
     <script type="text/javascript" src="/node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="/node_modules/angular-route/angular-route.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
     <script type="text/javascript" src="/scripts/controller/appCtrl.js"></script>
     <script type="text/javascript" src="/scripts/directives/personForm.js"></script>
